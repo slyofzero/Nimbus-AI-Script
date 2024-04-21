@@ -2,7 +2,7 @@ import { cleanUpInstances } from "./cleanUpInstances";
 import { unlockAccounts } from "./unlockAccounts";
 import { log } from "./utils/handlers";
 // Check for new transfers at every 20 seconds
-const interval = 20;
+const interval = 30 * 60;
 
 (async function () {
   log("Script started");
