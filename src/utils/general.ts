@@ -1,6 +1,3 @@
-import { cleanUpBotMessage } from "./bot";
-import { urlRegex } from "./constants";
-
 export function formatToInternational(numberToFormat: string | number) {
   numberToFormat = Number(Number(numberToFormat).toFixed(2));
   const formattedNumber = new Intl.NumberFormat("en-US").format(numberToFormat);
@@ -42,10 +39,6 @@ export function formatNumber(num: string | number) {
   return formatter.format(num);
 }
 
-export function formatM2Number(num: string | number) {
-  return cleanUpBotMessage(formatNumber(num));
-}
-
 export function roundUpToDecimalPlace(
   number: string | number,
   decimalPlaces: number
@@ -70,10 +63,6 @@ export function generateRandomID() {
   const part3 = Array.from({ length: 7 }, generateRandomDigit).join("");
 
   return `${part1}-${part2}-${part3}`;
-}
-
-export function isValidUrl(url: string) {
-  return urlRegex.test(url);
 }
 
 export function floatToBigInt(num: number) {
