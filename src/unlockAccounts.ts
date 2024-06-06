@@ -17,9 +17,9 @@ export async function unlockAccounts() {
       const wallet = new ethers.Wallet(decryptedKey, provider);
       const balance = (await wallet.getBalance()).toBigInt();
 
-      if (locked) {
-        await splitPayment(decryptedKey, balance);
-      }
+      // if (locked) {
+      //   await splitPayment(decryptedKey, balance);
+      // }
 
       if (balance === BigInt(0)) {
         updateDocumentById({
