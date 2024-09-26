@@ -1,4 +1,4 @@
-export const firebaseCollectionPrefix = "hostai";
+export const firebaseCollectionPrefix = "nimbusai";
 export const gasLimit = 21000;
 export const splitPaymentsWith: {
   [key: string]: { address: string; share: number };
